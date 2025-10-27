@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Mini Calculator</h1>
+    <label for="">Enter first number</label>
+    <input type="text" id="num1"><br><br>
+    <label for="">Enter sencond number</label>
+    <input type="text" id="num2"><br><br>
+    <label for="">Result</label>
+    <!-- <input type="text" id="output" readonly> -->
+    <h2 id="output">0</h2>
+    <br><br>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    <button onclick="mod()">%</button>
+
+    <script>
+        //what is function: block of code
+    //   what is DOM in javascript // document object modifier
+    // what is the use of documnet.getelement by id
+        function add() {
+            var a = Number(document.getElementById("num1").value)
+            var b = Number(document.getElementById("num2").value)
+            var c=(a + b)
+            // document.getElementById("output").value=c
+            document.getElementById("output").innerHTML=c
+        }
+        function sub() {
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            var e=(a - b)
+            // document.getElementById("output").value=e
+            document.getElementById("output").innerHTML=e
+          
+        }
+        function mul() {
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            var f=(a * b)
+            // document.getElementById("output").value=f
+            document.getElementById("output").innerHTML=f
+
+        }
+        function div() {
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            var g=(a / b)
+            // document.getElementById("output").value=g
+            document.getElementById("output").innerHTML=g
+
+        }
+         function mod() {
+            var a = document.getElementById("num1").value
+            var b = document.getElementById("num2").value
+            var h=(a % b)
+            // document.getElementById("output").value=h
+            document.getElementById("output").innerHTML=h
+
+        }
+    </script>
+</body>
+
+</html>
